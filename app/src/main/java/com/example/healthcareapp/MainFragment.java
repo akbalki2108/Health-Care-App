@@ -24,7 +24,7 @@ public class MainFragment extends Fragment {
         this.patient = patient;
     }
 
-
+    Button docBtn, labBtn, medFolBtn, medBtn, exerciseBtn, appointementBtn;
 
 
     @Nullable
@@ -35,7 +35,7 @@ public class MainFragment extends Fragment {
         getActivity().setTitle("Home");
 
         mAuth = FirebaseAuth.getInstance();
-
+        MainActivity activity = (MainActivity)getActivity();
         TextView userText = v.findViewById(R.id.user);
         if(patient != null){
             String nameStr = patient.getName();
@@ -43,6 +43,56 @@ public class MainFragment extends Fragment {
             nameStr = "Welcome " + nameParts[0];
             userText.setText(nameStr);
         }
+
+        docBtn = v.findViewById(R.id.docBtn);
+        labBtn = v.findViewById(R.id.labBtn);
+        medFolBtn = v.findViewById(R.id.medFolBtn);
+        medBtn = v.findViewById(R.id.medBtn);
+        exerciseBtn = v.findViewById(R.id.ExerciseBtn);
+        appointementBtn = v.findViewById(R.id.appointementBtn);
+
+        docBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Search Doctor", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        labBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "My lab Test", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        medFolBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Medical Folder", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        medBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Medicine", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        exerciseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Excercise", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        appointementBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Appointment", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         return  v;
     }

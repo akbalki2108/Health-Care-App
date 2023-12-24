@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -36,25 +35,33 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnRequst"
-        android:layout_width="105dp"
+        android:id="@+id/medFolBtn"
+        android:layout_width="107dp"
         android:layout_height="96dp"
         android:background="@drawable/button_home"
+        android:fontFamily="@font/roboto"
+        android:gravity="bottom|center"
+        android:paddingBottom="8dp"
         android:text="Medical Folder"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myDoctors" />
+        app:layout_constraintStart_toEndOf="@+id/labBtn" />
 
     <Button
-        android:id="@+id/myDoctors"
-        android:layout_width="105dp"
+        android:id="@+id/labBtn"
+        android:layout_width="107dp"
         android:layout_height="96dp"
         android:background="@drawable/button_home"
-        android:text="My Doctors"
+        android:text="Lab Test"
+        android:fontFamily="@font/roboto"
+        android:gravity="bottom|center"
+        android:paddingBottom="8dp"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,13 +74,17 @@
         app:layout_constraintGuide_percent="0.6" />
 
     <Button
-        android:id="@+id/myDoctors2"
-        android:layout_width="105dp"
+        android:id="@+id/ExerciseBtn"
+        android:layout_width="107dp"
         android:layout_height="96dp"
         android:background="@drawable/button_home"
-        android:text="My Doctors"
+        android:text="Exercise"
+        android:fontFamily="@font/roboto"
+        android:gravity="bottom|center"
+        android:paddingBottom="8dp"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,44 +92,126 @@
         app:layout_constraintVertical_bias="0.234" />
 
     <Button
-        android:id="@+id/appointement2"
-        android:layout_width="105dp"
+        android:id="@+id/appointementBtn"
+        android:layout_width="107dp"
         android:layout_height="96dp"
         android:background="@drawable/button_home"
+        android:fontFamily="@font/roboto"
+        android:gravity="bottom|center"
+        android:paddingBottom="8dp"
         android:text="Appointement"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/myDoctors"
+        app:layout_constraintStart_toEndOf="@+id/ExerciseBtn"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="0.234" />
 
     <Button
-        android:id="@+id/profile"
-        android:layout_width="105dp"
+        android:id="@+id/medBtn"
+        android:layout_width="107dp"
         android:layout_height="96dp"
         android:background="@drawable/button_home"
-        android:text="Profile"
+        android:fontFamily="@font/roboto"
+        android:gravity="bottom|center"
+        android:paddingBottom="8dp"
+        android:text="Medicine"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/myDoctors"
+        app:layout_constraintEnd_toStartOf="@+id/ExerciseBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="0.234" />
 
     <Button
-        android:id="@+id/searchBtn"
-        android:layout_width="105dp"
+        android:id="@+id/docBtn"
+        android:layout_width="107dp"
         android:layout_height="96dp"
         android:background="@drawable/button_home"
-        android:text="Search"
+        android:fontFamily="@font/roboto"
+        android:gravity="bottom|center"
+        android:paddingBottom="8dp"
+        android:text="My Doctors"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="13sp"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/myDoctors"
+        app:layout_constraintEnd_toStartOf="@+id/labBtn"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:elevation="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/docBtn"
+        app:layout_constraintStart_toStartOf="@+id/docBtn"
+        app:layout_constraintTop_toTopOf="@+id/docBtn"
+        app:srcCompat="@drawable/ic_doctor_search" />
+
+    <ImageView
+        android:id="@+id/doc_img"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:elevation="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labBtn"
+        app:layout_constraintEnd_toEndOf="@+id/labBtn"
+        app:layout_constraintStart_toStartOf="@+id/labBtn"
+        app:layout_constraintTop_toTopOf="@+id/labBtn"
+        app:srcCompat="@drawable/ic_biotech" />
+
+    <ImageView
+        android:id="@+id/med_folder_img"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:elevation="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/medFolBtn"
+        app:layout_constraintStart_toStartOf="@+id/medFolBtn"
+        app:layout_constraintTop_toTopOf="@+id/medFolBtn"
+        app:srcCompat="@drawable/ic_folder" />
+
+    <ImageView
+        android:id="@+id/med_img"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:elevation="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/medBtn"
+        app:layout_constraintEnd_toEndOf="@+id/medBtn"
+        app:layout_constraintStart_toStartOf="@+id/medBtn"
+        app:layout_constraintTop_toTopOf="@+id/medBtn"
+        app:srcCompat="@drawable/ic_medicine" />
+
+    <ImageView
+        android:id="@+id/excer_img"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:elevation="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ExerciseBtn"
+        app:layout_constraintEnd_toEndOf="@+id/ExerciseBtn"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/ExerciseBtn"
+        app:layout_constraintTop_toTopOf="@+id/ExerciseBtn"
+        app:srcCompat="@drawable/ic_exercise" />
+
+    <ImageView
+        android:id="@+id/appoint_img"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:elevation="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appointementBtn"
+        app:layout_constraintEnd_toEndOf="@+id/appointementBtn"
+        app:layout_constraintStart_toStartOf="@+id/appointementBtn"
+        app:layout_constraintTop_toTopOf="@+id/appointementBtn"
+        app:srcCompat="@drawable/ic_calendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

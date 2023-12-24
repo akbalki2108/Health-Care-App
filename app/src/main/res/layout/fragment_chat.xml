@@ -1,74 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/colorPrimary">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="chat_fragment"
-        android:textSize="30sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_above="@id/idEdtQuery"
+        android:layout_marginBottom="40dp"/>
 
-    <TextView
-        android:id="@+id/test_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="100dp"
-        android:text="test_name" />
 
-    <TextView
-        android:id="@+id/test_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="175dp"
-        android:text="test_phone" />
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/idEdtQuery"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:padding="5dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+
+<!--            &lt;!&ndash; text view for displaying question&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/idTVQuestion"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:text="Question"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            &lt;!&ndash; text view for displaying response&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/idTVResponse"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:text="Response"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="15sp" />-->
+<!--        </LinearLayout>-->
+
+<!--    </ScrollView>-->
+    <!-- text field for asking question-->
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/idEdtQuery"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:hint="name"
-        android:layout_marginTop="226dp"/>
+        android:background="@drawable/reg_edittext_style"
+        android:drawableEnd="@drawable/ic_send"
+        android:ems="10"
+        android:imeOptions="actionSend"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:hint="Enter your query"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="5dp" />
 
-    <EditText
-        android:id="@+id/editPhone"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="301dp"
-        android:hint="phone No" />
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editPhone"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="48dp"
-        android:text="submit" />
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/idTILQuery"-->
+<!--        android:background="@drawable/edittext_button_style_rounded"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:hint="Enter your query"-->
+<!--        android:padding="5dp"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        app:hintTextColor="@color/black">-->
 
-    <Button
-        android:id="@+id/read"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editPhone"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="121dp"
-        android:text="read"/>
-
-</RelativeLayout>
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/idEdtQuery"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="2dp"-->
+<!--            android:background="#f4f4f4"-->
+<!--            android:drawableEnd="@drawable/ic_send"-->
+<!--            android:ems="10"-->
+<!--            android:imeOptions="actionSend"-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:textSize="14sp" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -89,10 +89,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     patient = new Patient(userID,nameStr,Integer.parseInt(ageStr),genderStr,addressStr,aboutStr,phoneNoStr,emailStr);
 
-//                    patient.setPatientId(userID);
-//                    patient.setName(nameStr);
-//                    patient.setContactInfo(phoneStr);
-
                     fullName.setText(patient.getName());
                     email.setText(emailStr);
 
@@ -129,10 +125,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .commit();
                 break;
             case R.id.nav_chat:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new ChatFragment()).commit();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new TestFragment()).commit();
+                        new ChatFragment()).commit();
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                        new TestFragment()).commit();
                 break;
             case R.id.nav_profile:
                 ProfileFragment profileFragment = new ProfileFragment(patient);
