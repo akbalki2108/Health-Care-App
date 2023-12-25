@@ -55,6 +55,9 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Search Doctor", Toast.LENGTH_SHORT).show();
+                Intent searchDoctor = new Intent(activity,SearchDoctor.class);
+                searchDoctor.putExtra("Patient", patient);
+                startActivity(searchDoctor);
             }
         });
 
@@ -62,6 +65,9 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "My lab Test", Toast.LENGTH_SHORT).show();
+                Intent labTest = new Intent(activity,LabTest.class);
+                labTest.putExtra("Patient", patient);
+                startActivity(labTest);
             }
         });
 
@@ -69,6 +75,9 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Medical Folder", Toast.LENGTH_SHORT).show();
+                Intent medicalFolder = new Intent(activity,MedicalFolder.class);
+                medicalFolder.putExtra("Patient", patient);
+                startActivity(medicalFolder);
             }
         });
 
@@ -76,6 +85,9 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Medicine", Toast.LENGTH_SHORT).show();
+                Intent medicine = new Intent(activity,Medicine.class);
+                medicine.putExtra("Patient", patient);
+                startActivity(medicine);
             }
         });
 
@@ -83,6 +95,9 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Excercise", Toast.LENGTH_SHORT).show();
+                Intent exercise = new Intent(activity,Exercise.class);
+                exercise.putExtra("Patient", patient);
+                startActivity(exercise);
             }
         });
 
@@ -90,9 +105,11 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Appointment", Toast.LENGTH_SHORT).show();
+                Intent appointment = new Intent(activity,Appointment.class);
+                appointment.putExtra("Patient", patient);
+                startActivity(appointment);
             }
         });
-
 
         return  v;
     }
